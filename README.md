@@ -3,51 +3,78 @@ page_type: sample
 languages:
 - csharp
 products:
-- dotnet
-description: "Add 150 character max description"
-urlFragment: "update-this-to-unique-url-stub"
+- office-teams
+description: Grow Your Skills encourages employees to discover opportunities, contribute and acquire new skills.
+urlFragment: microsoft-teams-apps-growyourskills
 ---
 
-# Official Microsoft Sample
+# Grow Your Skills App Template
 
-<!-- 
-Guidelines on README format: https://review.docs.microsoft.com/help/onboard/admin/samples/concepts/readme-template?branch=master
+| [Documentation](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Home) | [Deployment guide](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Deployment-Guide) | [Architecture](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Solution-Overview) |
+| ---- | ---- | ---- |
 
-Guidance on onboarding samples to docs.microsoft.com/samples: https://review.docs.microsoft.com/help/onboard/admin/samples/process/onboarding?branch=master
+Grow Your Skills is a platform for employees to discover & contribute to gig projects or volunteer activities based on their interest which will help them to acquire new skills or master the one that they already have right inside teams. Also, this gives an opportunity for employees to collaborate and network with like-minded people.
 
-Taxonomies for products and languages: https://review.docs.microsoft.com/new-hope/information-architecture/metadata/taxonomies?branch=master
--->
+## Business Goals
 
-Give a short description for your sample here. What does it do and why is it important?
 
-## Contents
+Employers:
+ 
+* Drive employee engagement and provide an opportunity to network with like-minded people
+* Bring opportunities to support and accelerate employee's career development
+ 
 
-Outline the file contents of the repository. It helps users navigate the codebase, build configuration and any related assets.
+Employees: 
+ 
+* Contribute in Gig projects to acquire new skills and network with other co-workers
+* Opportunity to realize the potential and create more impact
+* Allow actions aligned with the career development aspirations
 
-| File/folder       | Description                                |
-|-------------------|--------------------------------------------|
-| `src`             | Sample source code.                        |
-| `.gitignore`      | Define what to ignore at commit time.      |
-| `CHANGELOG.md`    | List of changes to the sample.             |
-| `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
-| `README.md`       | This README file.                          |
-| `LICENSE`         | The license for the sample.                |
 
-## Prerequisites
+The app workflow is described below:
+1. Discover and join new side projects that have been created by your peers in the organization
 
-Outline the required components and tools that a user might need to have on their machine in order to run the sample. This can be anything from frameworks, SDKs, OS versions or IDE releases.
+2. Search for projects of your choice or preference based on filters such as skill etc.
 
-## Setup
+3. Create projects to request help with specific skills and give opportunity for your co-workers to grow
 
-Explain how to prepare the sample once the user clones or downloads the repository. The section should outline every step necessary to install dependencies and set up any settings (for example, API keys and output folders).
+4. View the skills acquired across multiple projects at one place
 
-## Running the sample
+5. Endorse team members for skills and send a personal note during project closure
 
-Outline step-by-step instructions to execute the sample and see its output. Include steps for executing the sample from the IDE, starting specific services in the Azure portal or anything related to the overall launch of the code.
+6. Configure the tab in a Channel filtered based on tags to look for any projects that are based on the topics or skills relevant to your team
 
-## Key concepts
+7. Collaborate using the Messaging extension, share the projects you have created or joined to garner more interest from your peers
 
-Provide users with more context on the tools and services used in the sample. Explain some of the code that is being used and how services interact with each other.
+
+![Discover projects](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Images/Discover_projects.png)
+
+![Acquired Skills](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Images/Skills_acquired.png)
+
+![Messaging extension](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Images/Messaging_extension.png)
+
+
+## Legal notice
+
+This app template is provided under the [MIT License](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/blob/master/LICENSE) terms.  In addition to these terms, by using this app template you agree to the following:
+
+-	You are responsible for complying with all applicable privacy and security regulations related to use, collection and handling of any personal data by your app.  This includes complying with all internal privacy and security policies of your organization if your app is developed to be sideloaded internally within your organization.
+
+-	Where applicable, you may be responsible for data related incidents or data subject requests for data collect through your app.
+
+-	Any trademarks or registered trademarks of Microsoft in the United States and/or other countries and logos included in this repository are the property of Microsoft, and the license for this project does not grant you rights to use any Microsoft names, logos or trademarks outside of this repository.  Microsoft’s general trademark guidelines can be found [here](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general.aspx).
+
+-	Use of this template does not guarantee acceptance of your app to the Teams app store.  To make this app available in the Teams app store, you will have to comply with the [submission and validation process](https://docs.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish), and all associated requirements such as including your own privacy statement and terms of use for your app.
+
+
+## Getting started
+
+Begin with the [Solution overview](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Solution-overview) to read about what the app does and how it works.
+
+When you're ready to try out Grow Your Skills app, or to use it in your own organization, follow the steps in the [Deployment guide](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Deployment-guide).
+
+#### Known issue:
+The app is currently not supported on iOS devices. We are actively working on fixing the issue and will update the repo as soon as it is available
 
 ## Contributing
 
