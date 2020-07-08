@@ -1,0 +1,309 @@
+﻿.close-project-container {
+    width: 75rem;
+    margin-left: 2rem;
+}
+
+.dialog-container-close-project {
+    width: 80rem !important;
+    max-height: 56rem !important;
+    padding-left: 0.5rem !important;
+}
+
+.divider-for-small-device {
+    width: 83.5%;
+    max-width: 83.5% !important;
+}
+
+@media only screen and (max-width: 650px) {
+    .close-project-container {
+        width: 100% !important;
+        height: 100% !important;
+        margin-left: 2rem;
+    }
+
+    .divider-for-small-device {
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    .dialog-container-close-project {
+        width: 100% !important;
+        height: 100% !important;
+        min-height: 100% !important;
+        padding-left: 0.5rem !important;
+        align-content: start;
+        padding-top: 0;
+    }
+
+    .list-view-container {
+        width: 98% !important;
+        height: 50vh !important;
+        overflow: auto;
+    }
+
+    .description-textarea {
+        width: 98% !important;
+        height: 3rem !important;
+        margin-top: 0.5rem !important;
+    }
+
+    .skills-input input {
+        width: 98% !important;
+        margin-top: 1rem;
+    }
+
+    .dialog-footer-wrapper {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        padding-bottom: 3rem;
+        padding-left: 2.5rem;
+        padding-right: 3rem;
+        align-content: flex-end;
+    }
+}
+
+.no-participant-joined {
+    margin-left: 35%;
+    margin-top: 7rem;
+    font-weight: 700;
+}
+
+.app-name-container {
+    padding-left: 0 !important;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+    .app-name-container .ui-itemlayout__content div span {
+        font-size: 1rem;
+    }
+
+.project-closure-image {
+    width: 6rem;
+    height: 4rem;
+}
+
+.error-text {
+    color: red;
+}
+
+.project-closure-heading {
+    padding-left: 0 !important;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+.project-closure-heading-content {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.app-dialog-heading {
+    font-weight: 100 !important;
+}
+
+.app-logo-container div {
+    margin-top: 0rem !important;
+}
+
+.table-user-cell {
+    max-width: 24rem !important;
+}
+
+.skills-input input {
+    width: 22rem;
+    margin-top: 1rem;
+}
+
+.description-textarea {
+    width: 24rem;
+    height: 3rem !important;
+    margin-top: 0.5rem !important;
+}
+
+.ui-table__row {
+    height: auto !important;
+}
+
+.project-members-heading {
+    font-weight: 100;
+    padding-left: 0rem !important;
+}
+
+.skills-container {
+    margin-bottom: 1rem;
+}
+
+.input-fields-margin-between-close-project {
+    margin-top: 4rem;
+}
+
+.description-textarea {
+    height: 10rem !important;
+}
+
+.nonmobile-endorse-skill-list {
+    display: block !important;
+    max-height: 30rem;
+    overflow: scroll;
+}
+
+
+/*acquired skills css*/
+
+.nonmobile-acquired-skill-list {
+    display: block !important;
+    max-height: 40rem;
+    overflow: scroll;
+}
+
+.skills-table-user-cell {
+    max-width: 35rem !important;
+}
+
+.project-title {
+    font-weight: 700;
+}
+
+.avatar-container {
+    width: 3rem !important;
+    height: 3rem !important;
+}
+
+    .avatar-container span {
+        height: 2.5rem !important;
+        width: 2.5rem !important;
+        margin-top: 0.3rem;
+    }
+
+    .avatar-container div {
+        margin-top: -0.5rem !important;
+        font-size: 1.2rem;
+    }
+
+.skills-label-wrapper {
+    padding-top: 0.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 1rem !important;
+    height: 2.67rem !important;
+    margin-right: 0.33rem !important;
+}
+.dark-container .skills-label-wrapper {
+    background-color: #484644 !important;
+    color: #ffffff !important;
+}
+
+    .skills-label-wrapper div.ui-box {
+        white-space: nowrap;
+        overflow: hidden;
+        max-width: 7rem;
+        text-overflow: ellipsis;
+    }
+
+.project-endorsee {
+    padding-top: 0.5rem !important;
+    padding-bottom: 1.5rem !important;
+    margin-top: 1rem !important;
+    height: 2.67rem !important;
+    margin-right: 0.33rem !important;
+}
+
+
+.skills-text-form {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 15rem;
+    white-space: nowrap;
+}
+
+.skills-acquired-header {
+    background-color: #F3F2F0;
+    padding-left: 0.8rem;
+    font-weight: 700;
+}
+
+.nonmobile-acquired-skill-list .ui-table__header {
+    background-color: #F3F2F0;
+}
+
+.table-rows {
+    margin-top: 1.2rem !important;
+}
+
+    .table-rows .ui-table__row:first-child {
+        height: 4rem !important;
+    }
+
+/*add new project css*/
+
+
+.skills-flex {
+    height: auto;
+    position: relative;
+    width: inherit;
+    margin-bottom: 1rem;
+}
+
+
+.skills-new-project .skills-label-wrapper {
+    padding-top: 1.3rem !important;
+    padding-bottom: 1.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-top: 1rem !important;
+    height: 2.67rem !important;
+    margin-right: 0.33rem !important;
+}
+
+.document-url-flex {
+    height: auto;
+    position: relative;
+    width: inherit;
+    margin-bottom: 1rem;
+    margin-left: 0rem !important;
+    cursor:pointer;
+}
+
+.document-url-text-form {
+    color: #6264A7 !important;
+    max-width: 49rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.document-url-label-wrapper {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    height: 2.67rem !important;
+    width: 100%;
+    margin-right: 0.33rem !important;
+}
+
+.dark-container .document-url-label-wrapper {
+    background-color: rgb(32, 31, 31) !important;
+}
+
+.document-url-label-wrapper:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+    .document-url-label-wrapper span {
+        font-size: 1.4rem !important;
+    }
+
+    .document-url-label-wrapper span {
+        font-size: 1.4rem !important;
+    }
+
+    .document-url-label-wrapper div.ui-box {
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+    }

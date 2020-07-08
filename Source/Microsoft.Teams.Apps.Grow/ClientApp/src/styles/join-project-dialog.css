@@ -1,0 +1,156 @@
+﻿.container-subdiv-myprojects {
+    height: 100vh;
+    overflow-y: hidden;
+    max-width: 170rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.trigger-text-wrapper {
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.project-menu{
+    border-bottom:none !important;
+}
+
+.trigger-text {
+    margin-left: 1rem;
+}
+
+.type-dropdown-wrapper {
+    width: 100%;
+}
+
+.type-dropdown-margin {
+    margin-bottom: 1rem;
+}
+
+.input-fields-margin-between-add-post {
+    margin-top: 1rem;
+}
+
+    .input-fields-margin-between-add-post button:first-child {
+        width: 11.8rem;
+    }
+
+.document-url-join-dialog {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.joined-project-text-area {
+    height: auto;
+    width: 100%;
+    font-size: 12px;
+    overflow-wrap: break-word;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 18px;
+    overflow-wrap: anywhere !important;
+}
+
+.add-icon {
+    margin-left: -4rem;
+    padding: 0.5rem;
+}
+
+.icon-hover {
+    cursor: pointer;
+}
+
+.input-label-space-between {
+    margin-top: 0.3rem;
+}
+
+
+.join-project-app-name-container {
+    padding-left: 0 !important;
+    margin-bottom: 1rem;
+}
+
+.join-project-app-logo-container {
+    width: 4rem;
+    height: 4rem;
+}
+
+.join-project-dialog-container {
+    width: 60rem !important;
+    height: 60rem !important;
+}
+
+.join-project-dialog-body {
+    padding: 0.5rem !important;
+    height: 44rem !important;
+    overflow: auto !important;
+    width: 100%;
+}
+
+.left-spacing-teamsize{
+    margin-left: 4.3rem;
+}
+
+.left-spacing-joined {
+    margin-left: 6.3rem;
+}
+
+.info-icon {
+    padding-top: 0.3rem;
+    color: #6264A7;
+}
+
+.join-project-dialog-footer {
+    width: 100%;
+}
+
+joined-project-half-field {
+    width: 50%;
+}
+
+.label-spacing {
+    margin-top: 2rem;
+}
+
+.no-url-added{
+    margin-left:1rem !important;
+}
+
+@media only screen and (max-width: 650px) {
+    .join-project-dialog-container {
+        position: relative !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 1rem !important;
+    }
+
+    .ui-box {
+        margin-bottom: 0 !important;
+    }
+
+    .join-project-dialog-body {
+        padding: 5px !important;
+        height: 90% !important;
+        overflow: auto !important;
+    }
+
+    .join-project-dialog-footer-wrapper {
+        position: absolute;
+        width: 95vw;
+        bottom: 1rem;
+    }
+
+    .join-project-dialog-provider-wrapper {
+        height: 95vh;
+    }
+
+    .highlight-menu {
+        color: #6264A7;
+        font-weight:700;
+    }
+}

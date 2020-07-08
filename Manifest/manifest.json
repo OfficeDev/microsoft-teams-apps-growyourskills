@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.5/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.5",
+  "version": "1.0.0",
+  "id": "94ef83a1-f72e-4fff-8358-0dd0465eae55",
+  "packageName": "com.microsoft.teams.apptemplates.growyourskills",
+  "developer": {
+    "name": "<company name>",
+    "websiteUrl": "<appDomain>",
+    "privacyUrl": "<privacy url>",
+    "termsOfUseUrl": "<terms of use url>"
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "name": {
+    "short": "Grow Your Skills",
+    "full": "Grow Your Skills"
+  },
+  "description": {
+    "short": "Encourage employees to discover opportunities, contribute and acquire new skills",
+    "full": "Grow Your Skills is a platform for employees to discover new projects/opportunities based on their interests, learn and acquire skills based upon the competencies required and qualifications."
+  },
+  "accentColor": "#B8FF4A",
+  "configurableTabs": [
+    {
+      "configurationUrl": "<appDomain>/configtab",
+      "canUpdateConfiguration": true,
+      "scopes": [ "team" ]
+    }
+  ],
+  "staticTabs": [
+    {
+      "entityId": "DiscoverProjectsTab",
+      "name": "Discover",
+      "contentUrl": "<appDomain>",
+      "websiteUrl": "<appDomain>",
+      "scopes": [ "personal" ]
+    },
+    {
+      "entityId": "YourProjectsTab",
+      "name": "Your projects",
+      "contentUrl": "<appDomain>/my-projects",
+      "websiteUrl": "<appDomain>/my-projects",
+      "scopes": [ "personal" ]
+    },
+    {
+      "entityId": "AcquiredSkillsTab",
+      "name": "Skills acquired",
+      "contentUrl": "<appDomain>/skill-acquired",
+      "websiteUrl": "<appDomain>/skill-acquired",
+      "scopes": [ "personal" ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "<botId>",
+      "scopes": [ "personal", "team" ],
+      "commandLists": [
+        {
+          "scopes": [ "personal" ],
+          "commands": [
+            {
+              "title": "Help",
+              "description": "Display commands and what they do."
+            }
+          ]
+        }
+      ],
+      "supportsFiles": false,
+      "isNotificationOnly": false
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "<botId>",
+      "canUpdateConfiguration": false,
+      "commands": [
+        {
+          "id": "allProjects",
+          "title": "All",
+          "description": "Show all created projects.",
+          "parameters": [
+            {
+              "name": "searchText",
+              "title": "allProjects",
+              "description": "Search projects"
+            }
+          ],
+          "initialRun": true
+        },
+        {
+          "id": "joinedProjects",
+          "title": "Projects joined",
+          "description": "Show current user joined projects.",
+          "parameters": [
+            {
+              "name": "searchText",
+              "title": "Projects joined",
+              "description": "Search projects"
+            }
+          ],
+          "initialRun": true
+        },
+        {
+          "id": "createdProjectsByMe",
+          "title": "Projects created",
+          "description": "Show projects created by current user.",
+          "parameters": [
+            {
+              "name": "searchText",
+              "title": "Projects created",
+              "description": "Search projects"
+            }
+          ],
+          "initialRun": true
+        }
+      ]
+    }
+  ],
+  "validDomains": [
+    "<appDomain>"
+  ],
+  "webApplicationInfo": {
+    "id": "<botId>",
+    "resource": "<ApplicationIdURI>"
+  }
+}

@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActiveStatusType" xml:space="preserve">
+    <value>Active</value>
+    <comment>Active project status</comment>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>Grow Your Skills</value>
+    <comment>Application name to show on carousel card content.</comment>
+  </data>
+  <data name="AuthorText" xml:space="preserve">
+    <value>Project owner</value>
+    <comment>Label text to show on Messaging Extension attachment card.</comment>
+  </data>
+  <data name="BlockedStatusType" xml:space="preserve">
+    <value>Blocked</value>
+    <comment>Blocked project status</comment>
+  </data>
+  <data name="CarouselCard1Text" xml:space="preserve">
+    <value>&lt;b&gt;Discover and join&lt;/b&gt; projects/opportunities that interests you to learn and acquire new skills. &lt;br /&gt;
+&lt;b&gt;View the skills&lt;/b&gt; acquired across multiple projects at one place.
+ &lt;br /&gt;
+&lt;b&gt;Create projects&lt;/b&gt; to give opportunity for your co-workers to grow.</value>
+    <comment>Carousel Card text.</comment>
+  </data>
+  <data name="CarouselCard2Text" xml:space="preserve">
+    <value>&lt;b&gt;Endorse&lt;/b&gt; team members and send a personal note during project closure.&lt;br /&gt;&lt;b&gt;Get notified&lt;/b&gt; on project related updates to manage effectively.</value>
+    <comment>Carousel Card text.</comment>
+  </data>
+  <data name="CarouselCard3Text" xml:space="preserve">
+    <value>&lt;b&gt;Add the app&lt;/b&gt; to the Channel Tab based on skills to learn together with your team.
+&lt;br /&gt;
+&lt;b&gt;Share the projects&lt;/b&gt; that you have created or part of in a channel or chat to learn together.</value>
+    <comment>Carousel Card text.</comment>
+  </data>
+  <data name="ChatButton" xml:space="preserve">
+    <value>Chat</value>
+    <comment>Text for chat button</comment>
+  </data>
+  <data name="ClosedStatusType" xml:space="preserve">
+    <value>Closed</value>
+    <comment>Closed project status</comment>
+  </data>
+  <data name="CongratulationsMessage" xml:space="preserve">
+    <value>Project team update</value>
+    <comment>Congratulations message for project closure card.</comment>
+  </data>
+  <data name="ConnectWithUserMessage" xml:space="preserve">
+    <value>I told {0} that you'd be in touch.</value>
+    <comment>Message to project owner to connect with team member.</comment>
+  </data>
+  <data name="DateFormat" xml:space="preserve">
+    <value>{0} {1}</value>
+    <comment>Used in date string format for adaptive card. {0} is for date and {1} is for time.</comment>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>Something went wrong. Try again in a few minutes.</value>
+    <comment>Error message when bot throws exception or unable to perform a task (Generic error message).</comment>
+  </data>
+  <data name="GoToSkillsCardButton" xml:space="preserve">
+    <value>Go to skills</value>
+    <comment>Button text in notification card sent to participants after project closure</comment>
+  </data>
+  <data name="joinProjectAfterDelete" xml:space="preserve">
+    <value>Want to join a different project?</value>
+  </data>
+  <data name="MessagingExtensionCardViewProjectDetailButtonText" xml:space="preserve">
+    <value>View details</value>
+    <comment>Messaging Extension attachment card button text.</comment>
+  </data>
+  <data name="NotificationCardMonthlyTitleText" xml:space="preserve">
+    <value>Your monthly digest</value>
+    <comment>Notification list card title text for monthly digest.</comment>
+  </data>
+  <data name="NotificationCardWeeklyTitleText" xml:space="preserve">
+    <value>Your weekly digest</value>
+    <comment>Notification list card title text for weekly digest.</comment>
+  </data>
+  <data name="NotificationListCardViewMoreButtonText" xml:space="preserve">
+    <value>View more</value>
+    <comment>Digest frequency list card view more button text.</comment>
+  </data>
+  <data name="NotStartedStatusType" xml:space="preserve">
+    <value>Not started</value>
+    <comment>Not started project status</comment>
+  </data>
+  <data name="OpenItem" xml:space="preserve">
+    <value>Open item</value>
+    <comment>Open item button text, which will show on Messaging Extension cards for redirection purpose.</comment>
+  </data>
+  <data name="PersonalWelcomeCardDiscoverButtonText" xml:space="preserve">
+    <value>View all projects</value>
+    <comment>Welcome card button text.</comment>
+  </data>
+  <data name="ProjectClosedMessage" xml:space="preserve">
+    <value>{0} has closed the project '**{1}**'</value>
+    <comment>Message to team members when project is closed.</comment>
+  </data>
+  <data name="ProjectDeletedMessage" xml:space="preserve">
+    <value>The project '**{1}**' was deleted by **{0}** and is now unavailable to join.</value>
+    <comment>Message to team members when project is deleted.</comment>
+  </data>
+  <data name="ProjectDetails" xml:space="preserve">
+    <value>Project details</value>
+    <comment>Button text for rendering project details</comment>
+  </data>
+  <data name="ProjectDurationText" xml:space="preserve">
+    <value>Duration</value>
+    <comment>Label text to show on Messaging Extension attachment card.</comment>
+  </data>
+  <data name="ProjectJoinedMessage" xml:space="preserve">
+    <value>**{0}** has joined your project '**{1}**'</value>
+    <comment>Message to project owner when someone joins project.</comment>
+  </data>
+  <data name="ProjectRemovalMessage" xml:space="preserve">
+    <value>**{0}** has removed you from the project '**{1}**'</value>
+    <comment>Message to team members when removed from project.</comment>
+  </data>
+  <data name="ProjectStatusIcon" xml:space="preserve">
+    <value>Project status icon</value>
+    <comment>Project status icon</comment>
+  </data>
+  <data name="SkillsEndorsedMessage" xml:space="preserve">
+    <value>Here are some of the skills {0} has endorsed you.</value>
+    <comment>Message to team members for skills endorsement</comment>
+  </data>
+  <data name="SkillsLabelText" xml:space="preserve">
+    <value>Skills needed</value>
+    <comment>Label text to show on card.</comment>
+  </data>
+  <data name="SorryMessage" xml:space="preserve">
+    <value>Sorry!</value>
+    <comment>Apology message for project deletion card.</comment>
+  </data>
+  <data name="StatusLabel" xml:space="preserve">
+    <value>Status</value>
+    <comment>Status label to be displayed on adpative card</comment>
+  </data>
+  <data name="TabName" xml:space="preserve">
+    <value>All projects</value>
+    <comment>All projects tab name</comment>
+  </data>
+  <data name="TeamSizeText" xml:space="preserve">
+    <value>Team size</value>
+    <comment>Label text to show on Messaging Extension attachment card.</comment>
+  </data>
+  <data name="TeamWelcomeCardConfigureButtonText" xml:space="preserve">
+    <value>Configure</value>
+    <comment>Team welcome card configure button text.</comment>
+  </data>
+  <data name="TryNewProjectsMessage" xml:space="preserve">
+    <value>Try other new projects and acquire skills.</value>
+    <comment>Message for trying new projects on removal from project.</comment>
+  </data>
+  <data name="WelcomeCardContent" xml:space="preserve">
+    <value>I'm the Grow Your Skills bot, and I'm here to help your team acquire new skills and gain on-the-job experiences by connecting people with projects.</value>
+    <comment>Welcome card content text.</comment>
+  </data>
+  <data name="WelcomeCardDescriptionText" xml:space="preserve">
+    <value>Here's what you can do:
+- Post your own project, requesting help from people with specific skills.
+- Discover projects to join based on skills you'd like to acquire or people you'd like to learn from.
+- Get endorsed for the skills you contribute to the projects you join.</value>
+    <comment>Welcome card commands header text.</comment>
+  </data>
+  <data name="WelcomeCardGetStartedText" xml:space="preserve">
+    <value>Let's get started!</value>
+    <comment>Text to show on welcome card.</comment>
+  </data>
+  <data name="WelcomeCardTeamDigestContent" xml:space="preserve">
+    <value>Get a **digest of content** that are added based on your preference in a channel to stay updated on the topics.</value>
+    <comment>Welcome card line one content for channel</comment>
+  </data>
+  <data name="WelcomeCardTeamShareContent" xml:space="preserve">
+    <value>**Search &amp; Share** your favorite reads in a channel or chat to help your Peers grow.</value>
+    <comment>Welcome card line two content for channel</comment>
+  </data>
+  <data name="WelcomeCardTitle" xml:space="preserve">
+    <value>Welcome!</value>
+    <comment>Welcome card title text.</comment>
+  </data>
+</root>
