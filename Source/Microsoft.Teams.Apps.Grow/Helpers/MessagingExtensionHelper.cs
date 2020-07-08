@@ -239,7 +239,15 @@ namespace Microsoft.Teams.Apps.Grow.Helpers
                         Title = this.localizer.GetString("MessagingExtensionCardViewProjectDetailButtonText"),
                         Data = new AdaptiveSubmitActionData
                         {
-                            Msteams = new TaskModuleAction(Constants.ViewProjectDetail, JsonConvert.SerializeObject(new AdaptiveTaskModuleCardAction { Text = Constants.ViewProjectDetail, ProjectId = project.ProjectId, CreatedByUserId = project.CreatedByUserId })),
+                            Msteams = new TaskModuleAction(
+                                Constants.ViewProjectDetail,
+                                JsonConvert.SerializeObject(
+                                    new BotCommand
+                                    {
+                                        Text = Constants.ViewProjectDetail,
+                                        ProjectId = project.ProjectId,
+                                        CreatedByUserId = project.CreatedByUserId,
+                                    })),
                         },
                     });
 

@@ -11,6 +11,7 @@ namespace Microsoft.Teams.Apps.Grow.Cards
     using Microsoft.Bot.Schema.Teams;
     using Microsoft.Extensions.Localization;
     using Microsoft.Teams.Apps.Grow.Common;
+    using Microsoft.Teams.Apps.Grow.Models;
     using Microsoft.Teams.Apps.Grow.Models.Card;
     using Newtonsoft.Json;
 
@@ -273,7 +274,15 @@ namespace Microsoft.Teams.Apps.Grow.Cards
                     Title = localizer.GetString("ProjectDetails"),
                     Data = new AdaptiveSubmitActionData
                     {
-                        Msteams = new TaskModuleAction(Constants.ViewProjectDetail, JsonConvert.SerializeObject(new AdaptiveTaskModuleCardAction { Text = Constants.ViewProjectDetail, ProjectId = projectId, CreatedByUserId = createdByUserId })),
+                        Msteams = new TaskModuleAction(
+                            Constants.ViewProjectDetail,
+                            JsonConvert.SerializeObject(
+                                new BotCommand
+                                {
+                                    Text = Constants.ViewProjectDetail,
+                                    ProjectId = projectId,
+                                    CreatedByUserId = createdByUserId,
+                                })),
                     },
                 },
             };
