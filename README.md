@@ -8,7 +8,7 @@ description: Grow Yor Skills encourages employees to discover opportunities, con
 urlFragment: microsoft-teams-apps-growyourskills
 ---
 
-# Share Now App Template
+# Grow Your Skills App Template
 
 | [Documentation](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Home) | [Deployment guide](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Deployment-Guide) | [Architecture](https://github.com/OfficeDev/microsoft-teams-apps-growyourskills/wiki/Solution-Overview) |
 | ---- | ---- | ---- |
