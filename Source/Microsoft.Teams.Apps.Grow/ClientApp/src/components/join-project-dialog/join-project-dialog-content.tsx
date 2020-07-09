@@ -1,4 +1,4 @@
-﻿// <copyright file="join-project-dialog-content.tsx" company="Microsoft">
+// <copyright file="join-project-dialog-content.tsx" company="Microsoft">
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
@@ -8,7 +8,7 @@ import { CloseIcon } from "@fluentui/react-icons-northstar";
 import * as microsoftTeams from "@microsoft/teams-js";
 import DocumentUrl from "../new-project-dialog/document-url";
 import { IProjectDetails } from '../card-view/discover-wrapper-page';
-import { joinProject } from "../../api/discover-api";
+import { joinProject, getProjectDetailToJoin } from "../../api/discover-api";
 import { WithTranslation, withTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 import Resources from "../../constants/resources";
@@ -59,10 +59,27 @@ class JoinProjectDialogContent extends React.Component<IJoinProjectDialogContent
             this.loggedInUserId = context.userObjectId!;
             this.setState({ theme: context.theme! })
         });
-        this.setState({
-            skillList: this.state.projectDetails.requiredSkills.split(";"),
-            documentUrlList: this.state.projectDetails.supportDocuments.split(";")
-        })
+
+        this.getProjectDetails();
+    }
+
+    /**
+    * Fetch project details.
+    */
+    getProjectDetails = async () => {
+        var response = await getProjectDetailToJoin(this.state.projectDetails.projectId, this.state.projectDetails.createdByUserId);
+
+        if (response.status === 200 && response.data) {
+
+            this.setState({
+                projectDetails: response.data,
+                skillList: response.data.requiredSkills.split(";"),
+                documentUrlList: response.data.supportDocuments.split(";")
+            });
+        }
+        else {
+            this.props.onSubmit(response.data, false);
+        }
     }
 
 	/**
