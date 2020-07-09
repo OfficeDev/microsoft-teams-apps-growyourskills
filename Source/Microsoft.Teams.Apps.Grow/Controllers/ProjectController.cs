@@ -221,7 +221,7 @@ namespace Microsoft.Teams.Apps.Grow.Controllers
                 // Validating Project Id as it will be generated at server side in case of adding new project but cannot be null or empty in case of update.
                 var currentProject = await this.projectStorageProvider.GetProjectAsync(this.UserAadId, projectDetails.ProjectId);
 
-                if (currentProject == null && currentProject.IsRemoved)
+                if (currentProject == null || currentProject.IsRemoved)
                 {
                     this.logger.LogError($"Could not find project {projectDetails.ProjectId} for user {this.UserAadId}.");
                     this.RecordEvent("Update project - HTTP Patch call failed");
