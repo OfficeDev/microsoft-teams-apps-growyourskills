@@ -1,4 +1,4 @@
-﻿// <copyright file="edit-project-dialog-content.tsx" company="Microsoft">
+// <copyright file="edit-project-dialog-content.tsx" company="Microsoft">
 // Copyright (c) Microsoft. All rights reserved.
 // </copyright>
 
@@ -10,7 +10,7 @@ import DocumentUrl from "../new-project-dialog/document-url";
 import StartDateEndDate from "../new-project-dialog/date-picker";
 import { IProjectDetails } from '../card-view/discover-wrapper-page';
 import { ISkillValidationParameters } from '../new-project-dialog/new-project-dialog-content';
-import { updateProjectContent } from "../../api/discover-api";
+import { updateProjectContent, getProjectDetailToJoin } from "../../api/discover-api";
 import { WithTranslation, withTranslation } from "react-i18next";
 import { TFunction } from "i18next";
 import { IPostType } from "../../constants/resources";
@@ -110,37 +110,56 @@ class EditProjectDialogContent extends React.Component<IEditProjectDialogContent
             this.setState({ theme: context.theme! })
         });
 
-        if (this.state.projectDetails.supportDocuments === "") {
+        this.getProjectDetails();
+    }
+
+    /**
+    * Fetch project details.
+    */
+    getProjectDetails = async () => {
+        var response = await getProjectDetailToJoin(this.state.projectDetails.projectId, this.state.projectDetails.createdByUserId);
+
+        if (response.status === 200 && response.data) {
+
             this.setState({
-                skillList: this.state.projectDetails.requiredSkills.split(";"),
-                documentUrlList: []
+                projectDetails: response.data,
             });
+
+            if (this.state.projectDetails.supportDocuments === "") {
+                this.setState({
+                    skillList: this.state.projectDetails.requiredSkills.split(";"),
+                    documentUrlList: []
+                });
+            }
+            else {
+                this.setState({
+                    skillList: this.state.projectDetails.requiredSkills.split(";"),
+                    documentUrlList: this.state.projectDetails.supportDocuments.split(";")
+                });
+            }
+
+            let participantDetails = this.state.projectDetails.projectParticipantsUserMapping.split(';');
+            let participant: Array<string> = [];
+            let participantName = "";
+            if (this.state.projectDetails.projectParticipantsUserMapping !== "" && participantDetails.length) {
+                participantDetails.map((value, index) => {
+                    participant = value.split(':');
+                    if (index === participantDetails.length - 1) {
+                        participantName = participantName + participant[1];
+                    }
+                    else {
+                        participantName = participantName + participant[1] + ";";
+                    }
+                });
+
+                this.setState({
+                    teamMember: participantName,
+                    teamMemberCount: participantName.split(';').length
+                });
+            }
         }
         else {
-            this.setState({
-                skillList: this.state.projectDetails.requiredSkills.split(";"),
-                documentUrlList: this.state.projectDetails.supportDocuments.split(";")
-            });
-        }
-
-        let participantDetails = this.props.projectDetails.projectParticipantsUserMapping.split(';');
-        let participant: Array<string> = [];
-        let participantName = "";
-        if (this.props.projectDetails.projectParticipantsUserMapping !== "" && participantDetails.length) {
-            participantDetails.map((value, index) => {
-                participant = value.split(':');
-                if (index === participantDetails.length - 1) {
-                    participantName = participantName + participant[1];
-                }
-                else {
-                    participantName = participantName + participant[1] + ";";
-                }
-            });
-
-            this.setState({
-                teamMember: participantName,
-                teamMemberCount: participantName.split(';').length
-            });
+            this.props.onSubmit(response.data, false);
         }
     }
 
@@ -465,7 +484,7 @@ class EditProjectDialogContent extends React.Component<IEditProjectDialogContent
 	* Checks whether all validation conditions are matched before user submits edited post content
 	*/
     checkIfSubmitAllowed = () => {
-        let projectValidationStatus = { isTitleValid: true, isDescriptionValid: true, isUrlListValid: true, isTeamSizeValid: true, isDateValid: true};
+        let projectValidationStatus = { isTitleValid: true, isDescriptionValid: true, isUrlListValid: true, isTeamSizeValid: true, isDateValid: true };
 
         this.props.allProjectDetails.map((projects) => {
             if (projects.title.trim().toLowerCase().localeCompare(this.state.projectDetails.title.trim().toLowerCase()) === 0 && projects.projectId !== this.state.projectDetails.projectId) {
@@ -851,7 +870,7 @@ class EditProjectDialogContent extends React.Component<IEditProjectDialogContent
                                     this.state.skillList.map((value: string, index) => {
                                         if (value.trim().length > 0) {
                                             return <Label
-                                                styles={{padding:"1rem"}}
+                                                styles={{ padding: "1rem" }}
                                                 circular
                                                 content={<Text className="tag-text-form" content={value.trim()} title={value.trim()} size="small" />}
                                                 className={this.state.theme === Resources.dark ? "tags-label-wrapper-dark" : "tags-label-wrapper"}
@@ -887,7 +906,7 @@ class EditProjectDialogContent extends React.Component<IEditProjectDialogContent
                         </Flex>
                         <Flex gap="gap.smaller" className="input-fields-margin-between-add-post">
                             <Text className="form-label" content={this.localize("teamMemberLabel") + " (" + membersJoined + "/" + this.state.projectDetails.teamSize + ")"} />
-                            <InfoIcon className="info-icon" outline size="small" title={this.localize("docLinkFormLabel")} />
+                            <InfoIcon className="info-icon" outline size="small" title={this.localize("teamMemberLabel")} />
                         </Flex>
                         <Flex gap="gap.smaller" className="document-url-flex" vAlign="center">
                             <div>
