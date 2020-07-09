@@ -887,7 +887,7 @@ class EditProjectDialogContent extends React.Component<IEditProjectDialogContent
                         </Flex>
                         <Flex gap="gap.smaller" className="input-fields-margin-between-add-post">
                             <Text className="form-label" content={this.localize("teamMemberLabel") + " (" + membersJoined + "/" + this.state.projectDetails.teamSize + ")"} />
-                            <InfoIcon className="info-icon" outline size="small" title={this.localize("docLinkFormLabel")} />
+                            <InfoIcon className="info-icon" outline size="small" title={this.localize("teamMemberLabel")} />
                         </Flex>
                         <Flex gap="gap.smaller" className="document-url-flex" vAlign="center">
                             <div>
