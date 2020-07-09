@@ -501,16 +501,20 @@ class DiscoverWrapperPage extends React.Component<WithTranslation, ICardViewStat
         if (isSuccess) {
             this.allProjects.map((post: IProjectDetails) => {
                 if (post.projectId === cardDetails.projectId) {
-                    post.description = cardDetails.description;
-                    post.title = cardDetails.title;
-                    post.requiredSkills = cardDetails.requiredSkills;
-                    post.status = cardDetails.status;
-                    post.projectParticipantsUserIds = cardDetails.projectParticipantsUserIds;
-                    post.projectParticipantsUserMapping = cardDetails.projectParticipantsUserMapping;
-                    post.projectEndDate = cardDetails.projectEndDate;
-                    post.projectStartDate = cardDetails.projectStartDate;
-                    post.teamSize = cardDetails.teamSize;
-                    post.supportDocuments = cardDetails.supportDocuments; 
+                    post = cardDetails;
+                    post.isCurrentUserProject = true;
+
+                    let searchedAuthor = this.authorAvatarBackground.find((author) => author.id === post.createdByUserId);
+                    if (searchedAuthor) {
+                        post.avatarBackgroundColor = searchedAuthor.color;
+                    }
+                    else {
+                        let color = generateColor();
+                        this.authorAvatarBackground.push({ id: post.createdByUserId, color: color });
+                        post.avatarBackgroundColor = color;
+
+                        localStorage.setItem("avatar-colors", JSON.stringify(this.authorAvatarBackground));
+                    }
                 }
             });
 
