@@ -123,8 +123,8 @@
   "joinButtonText": "Join",
 
   "editProject": "Edit project",
-  "teamMemberLabel": "Team Member",
-  "projectStatus": "Project Status",
+  "teamMemberLabel": "Team member",
+  "projectStatus": "Project status",
   "projectStatusPlaceholder": "Select status",
   "leaveProject": "Leave this project",
   "skillsHeader": "*Skills",
