@@ -63,9 +63,9 @@
       "type": "string",
       "minLength": 36,
       "maxLength": 36,
-      "defaultValue": "c1b50ba4-a9fc-46ed-ae5c-c4060461f88b",
+      "defaultValue": "94ef83a1-f72e-4fff-8358-0dd0465eae55",
       "metadata": {
-        "description": "Manifest Id (Required for deeplinking)"
+        "description": "Manifest Id is required to create deep link URLs for static tabs."
       }
     },
     "tenantId": {

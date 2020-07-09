@@ -699,7 +699,7 @@ class DiscoverWrapperPage extends React.Component<WithTranslation, ICardViewStat
                     <div className="container-div">
                         <div className="container-subdiv">
                             <NotificationMessage onClose={this.hideAlert} showAlert={this.state.showAlert} content={this.state.alertMessage} notificationType={this.state.alertprojectStatus} />
-                            <NoPostAddedPage showAddPost={false} onNewPostSubmit={this.onNewPost} />
+                            <FilterNoPostContentPage />
                         </div>
                     </div>
                 )
